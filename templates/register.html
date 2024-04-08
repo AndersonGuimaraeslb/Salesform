@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+ 
+    <script src="\static\js\cru.js"></script>
+
+    <link href="\static\vendor\fontawesome-free\css\all.min.css" rel="stylesheet" type="text/css">
+    <link
+        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet">
+
+    <!-- Custom styles for this template-->
+    <link href="\static\css\sb-admin-2.css" rel="stylesheet">
+
+</head>
+
+<body class="bg-gradient-primary">
+
+                  <div class="container-md">
+
+        <div class="card o-hidden border-0 shadow-lg my-5">
+            <div class="card-body p-0">
+                <!-- Nested Row within Card Body -->
+                <div class="row">
+                    <div class="col-lg-10">
+                        <div class="p-5">
+                            <div class="text-xl-start">
+                                <h1 class="h1 text-gray-700 mb-4">Insira um Novo pedido</h1>
+                            </div>
+                           
+                            <form
+                              class="c-form" action= "{{url_for('pedidos.inserirpedido')}}" method= "POST">
+                                <div class="form-group col-md-5">
+                              <label for="inputnome">Cliente</label>
+                                <input type="text" class="form-control" id="inputnome" placeholder="Selecione o Cliente" name="Cliente">
+                                </div>
+                                <div class="form-group col-md-5">
+                             <label for="inputproduto">Produto</label>
+                                  <input type="text" class="form-control" id="inputproduto" placeholder="Selecione o Produto" name="Produto">
+                                </div>
+                                <div class="form-group col-md-3">
+                                  <label for="inputtabelapreco">Quantiade</label>
+                                  <input type="number" class="form-control" id="inputquantidade" name="Quantidade">
+                                </div>
+                              <div class="form-group">
+                                <label for="inputcondpag">Condição de Pagamento</label>
+                                <input type="text" class="form-control" id="inputcondpag" placeholder="Selecione a Condição de Pagamento" name="CondPagamento">
+                              </div>
+                              <div class="form-group">
+                                <label for="tipotransacao">Tipo de Transação</label>
+                                <input type="text" class="form-control" id="tipotransacao" placeholder="Selecione o Tipo de Transação" name="Tipo de Transacao">
+                              </div>
+                              <div class="form-row">
+                                <div class="form-group col-md-6">
+                                  <label for="inputtabelapreco">Tabela de Preço</label>
+                                  <input type="text" class="form-control" id="inputtabelapreco" name="Tabela de preco">
+                                </div>
+                                <div class="form-group col-md-4">
+                                  <label for="inputState">State</label>
+                                  <select id="inputState" class="form-control">
+                                    <option selected>Choose...</option>
+                                    <option>...</option>
+                                  </select>
+                                </div>
+                                <div class="form-group col-md-2">
+                                  <label for="inputZip">Zip</label>
+                                  <input type="text" class="form-control" id="inputZip">
+                                </div>
+                              <div>
+                              <button type="submit" class="btn btn-primary">Enviar pedido</button>
+                              <a class="btn btn-info" href="\" role="button">Voltar ao Inicio</a>
+                            </div>
+                            </form>
+                            <hr>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Bootstrap core JavaScript-->
+    <script src="\static\vendor\jquery\jquery.min.js"></script>
+    <script src="\static\vendor\bootstrap\js\bootstrap.bundle.min.js"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="\static\vendor\jquery-easing\jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="\static\js\sb-admin-2.min.js"></script>
+
+</body>
+
+</html>
